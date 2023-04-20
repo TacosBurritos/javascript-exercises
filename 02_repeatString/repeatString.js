@@ -1,11 +1,12 @@
-const repeatString = function(phrase, i) {
-    i = Number(i);
-    let tempPhrase = phrase;
-    while (i < 0){
-        phrase = tempPhrase + phrase;
-        i--;
+const repeatString = function(phrase, times) {
+    let tempPhrase = '';
+    if(times < 0){
+        return 'ERROR';
     }
-    return phrase;
+    for(let i = 0; i < times; i++){
+        tempPhrase += phrase;
+    }
+    return tempPhrase;
 };
 
 // Do not edit below this line
